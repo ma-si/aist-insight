@@ -18,9 +18,17 @@ class ModuleTest extends PHPUnit_Framework_TestCase
     /** @var Module */
     private $module;
 
+    /**
+     * __NAMESPACE__ of module
+     *
+     * @var string
+     */
+    private $namespace;
+
     public function setUp()
     {
         $this->module = new Module();
+        $this->namespace = 'AistInsight';
     }
 
     public function testGetConfig()
@@ -30,7 +38,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
         $expectedConfig = [
             'view_helpers' => [
                 'invokables' => [
-                    'insight' => __NAMESPACE__ . '\View\Helper\Insight',
+                    'insight' => $this->namespace . '\View\Helper\Insight',
                 ],
             ],
         ];
@@ -51,7 +59,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
             ],
             'Zend\Loader\StandardAutoloader' => [
                 'namespaces' => [
-                    'AistInsight' => realpath(__DIR__ . '/../..') . '/src/' . 'AistInsight',
+                    $this->namespace => realpath(__DIR__ . '/../..') . '/src/' . $this->namespace,
                 ],
             ],
         ];
