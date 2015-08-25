@@ -51,7 +51,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
             ],
             'Zend\Loader\StandardAutoloader' => [
                 'namespaces' => [
-                    'AistLocale' => realpath(__DIR__ . '/../..') . '/src/' . 'AistLocale',
+                    'AistInsight' => realpath(__DIR__ . '/../..') . '/src/' . 'AistInsight',
                 ],
             ],
         ];
