@@ -1,0 +1,36 @@
+{
+    "name": "aist/aist-insight",
+    "description": "ZF2 View helper plugin for SensioLabsInsight.",
+    "homepage": "http://mateuszsitek.com/projects/aist-insight",
+    "license": "BSD-3-Clause",
+    "type": "zf2-module",
+    "keywords": [
+        "aist",
+        "insight",
+        "zf2"
+    ],
+    "authors": [
+        {
+            "name": "MaSi",
+            "email": "webdeveloper@mateuszsitek.com",
+            "homepage": "http://mateuszsitek.com",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "zendframework/zend-view": ">=2.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "AistInsight\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AistInsightTest\\": "test/"
+        }
+    }
+}
