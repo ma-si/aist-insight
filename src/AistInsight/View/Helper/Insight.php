@@ -27,7 +27,7 @@ class Insight extends AbstractHtmlElement
     /**
      * Default value whether img should be wrapped into html a tag
      */
-    const IS_LINK = true;
+    const LINKED = true;
 
     /**
      * Insight size
@@ -44,7 +44,7 @@ class Insight extends AbstractHtmlElement
     const OPTIONS = [
         'badge_size' => self::SIZE_BIG,
         'secure' => self::INSIGHT_URL_SECURE,
-        'is_link' => self::IS_LINK,
+        'linked' => self::LINKED,
     ];
 
     /**
@@ -73,7 +73,7 @@ class Insight extends AbstractHtmlElement
      * $options may include the following:
      * - 'size' size of img to return
      * - 'secure' bool load from the SSL or Non-SSL location
-     * - 'is_link' bool whether img should be wrapped into html a tag
+     * - 'linked' bool whether img should be wrapped into html a tag
      *
      * @param  string|null $projectKey Project key..
      * @param  null|array $options Options
@@ -104,7 +104,7 @@ class Insight extends AbstractHtmlElement
      */
     public function __toString()
     {
-        return (true === $this->options['is_link']) ? $this->getATag() : $this->getImgTag();
+        return (true === $this->options['linked']) ? $this->getATag() : $this->getImgTag();
     }
 
     /**
@@ -247,14 +247,14 @@ class Insight extends AbstractHtmlElement
     }
 
     /**
-     * Set is link
+     * Set linked
      *
-     * @param  string $isLink Define whether img should be wrapped into html a tag
+     * @param  string $linked Define whether img should be wrapped into html a tag
      * @return $this
      */
-    public function setIsLink($isLink)
+    public function setLinked($linked)
     {
-        $this->options['is_link'] = $isLink;
+        $this->options['linked'] = $linked;
 
         return $this;
     }
