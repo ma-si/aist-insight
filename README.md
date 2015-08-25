@@ -1,4 +1,4 @@
-AistInsight [![SensioLabsInsight](https://insight.sensiolabs.com/projects/49aa984e-d392-4029-aebf-7e92ca7f55aa/big.png)](https://insight.sensiolabs.com/projects/49aa984e-d392-4029-aebf-7e92ca7f55aa)
+AistInsight [![SensioLabsInsight](https://insight.sensiolabs.com/projects/49aa984e-d392-4029-aebf-7e92ca7f55aa/small.png)](https://insight.sensiolabs.com/projects/49aa984e-d392-4029-aebf-7e92ca7f55aa)
 ===========
 ZF2 View helper plugin for [SensioLabsInsight](https://insight.sensiolabs.com).
 
@@ -13,7 +13,6 @@ ZF2 View helper plugin for [SensioLabsInsight](https://insight.sensiolabs.com).
 
 ## Installation
 Installation of this module uses composer.
-
 For composer documentation, please refer to [getcomposer.org](http://getcomposer.org/).
 
 1. Install the module via composer by running:
@@ -30,19 +29,15 @@ For composer documentation, please refer to [getcomposer.org](http://getcomposer
 ## Use
 Required Insight project key.
 
-    ```php
     echo $this->insight('project_key', ['badge_size' => Insight::SIZE_BIG, 'linked' => true], ['class' => 'pull-right']);
     echo $this->insight('project_key', [], ['class' => 'pull-right']);
     echo $this->insight('project_key', Insight::OPTIONS, ['class' => 'pull-right']);
-    ```
 
 each one will render the HTML below:
 
-    ```html
     <a href="https://insight.sensiolabs.com/projects/{project_key}">
     <img src="https://insight.sensiolabs.com/projects/{project_key}/{size}.png" class="pull-right">
     </a>
-    ```
 
 Available sizes: `big`, `small`, `mini`.
 
