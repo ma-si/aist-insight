@@ -35,5 +35,8 @@
         "psr-4": {
             "AistInsightTest\\": "test/"
         }
+    },
+    "extra": {
+        "sensiolabs-insight": "49aa984e-d392-4029-aebf-7e92ca7f55aa"
     }
 }

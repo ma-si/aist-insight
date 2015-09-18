@@ -13,6 +13,11 @@ namespace AistInsight;
 class Module
 {
     /**
+     * SensioLabsInsight
+     */
+    const INSIGHT = '49aa984e-d392-4029-aebf-7e92ca7f55aa';
+
+    /**
      * Get Config
      *
      * @return array
