@@ -25,7 +25,7 @@ class Insight extends AbstractHtmlElement
     const INSIGHT_URL_SECURE = 'https://insight.sensiolabs.com/projects';
 
     /**
-     * Default value whether img should be wrapped into html a tag
+     * Default value whether img should be wrapped into html <a> tag
      */
     const LINKED = true;
 
@@ -182,7 +182,7 @@ class Insight extends AbstractHtmlElement
     public function getATag()
     {
         $html = '<a'
-            . $this->htmlAttribs(['href' => $this->getProjectUrl()])
+            . $this->htmlAttribs(['href' => $this->getProjectUrl(), 'target' => '_blank'])
             . $this->getClosingBracket()
             . $this->getImgTag()
             . '</a>'
